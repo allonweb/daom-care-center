@@ -45,29 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form Submissions (Mock)
-    const recruitmentForm = document.getElementById('recruitment-form');
-    const consultForm = document.getElementById('consult-form');
-
-    const handleFormSubmit = (e, formName) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData.entries());
-        
-        console.log(`${formName} Submission:`, data);
-        
-        // Show success message (simple alert for now)
-        alert(`신청이 정상적으로 접수되었습니다. 곧 연락드리겠습니다.\n\n[${formName}]`);
-        e.target.reset();
-    };
-
-    if (recruitmentForm) {
-        recruitmentForm.addEventListener('submit', (e) => handleFormSubmit(e, '요양보호사 모집'));
-    }
-
-    if (consultForm) {
-        consultForm.addEventListener('submit', (e) => handleFormSubmit(e, '상담신청'));
-    }
+    // Form Submissions (Netlify handles this automatically)
+    // Removed the mock handler to allow actual submission
 
     // Header reveal on scroll
     let lastScroll = 0;
