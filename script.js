@@ -45,8 +45,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form Submissions (Netlify handles this automatically)
-    // Removed the mock handler to allow actual submission
+    // Form Submissions (Netlify AJAX Submission)
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        const myForm = e.target;
+        const formData = new FormData(myForm);
+        
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+        .then(() => {
+            alert('문의가 접수되었습니다. 곧 연락드리겠습니다.');
+            myForm.reset();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        })
+        .catch((error) => {
+            alert('전송 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.');
+            console.error(error);
+        });
+    };
+
+    document.querySelectorAll('form[data-netlify="true"]').forEach(form => {
+        form.addEventListener('submit', handleFormSubmit);
+    });
 
     // Header reveal on scroll
     let lastScroll = 0;
