@@ -337,6 +337,39 @@ nav {
     background: #002266;
 }
 
+.hidden {
+    display: none !important;
+}
+
+.privacy-agreement {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.privacy-agreement input[type="checkbox"] {
+    width: auto;
+    margin-top: 5px;
+}
+
+.privacy-agreement label {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.privacy-detail {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
 /* Floating Kakao */
 .floating-kakao {
     position: fixed;

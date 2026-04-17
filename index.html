@@ -149,7 +149,10 @@
                 <div class="sub-text">상담 신청을 남겨주시면 센터장이 직접 친절히 상담해 드립니다.</div>
             </div>
             <div class="form-container">
-                <form id="consult-form">
+                <form id="consult-form" name="consult-form" data-netlify="true" netlify-honeypot="bot-field">
+                    <p class="hidden">
+                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <div class="form-group">
                         <label for="con-name">신청인 성함</label>
                         <input type="text" id="con-name" name="name" placeholder="이름을 입력해 주세요" required>
@@ -161,6 +164,16 @@
                     <div class="form-group">
                         <label for="con-parents">부모님 상태 (증상)</label>
                         <textarea id="con-parents" name="symptoms" placeholder="부모님의 현재 건강 상태나 필요하신 도움을 상세히 남겨주세요" required></textarea>
+                    </div>
+                    <div class="privacy-agreement">
+                        <input type="checkbox" id="con-agree" required>
+                        <label for="con-agree">
+                            개인정보 수집 및 이용에 동의합니다. (필수)
+                            <span class="privacy-detail">
+                                * 수집항목: 성함, 연락처(필수), 입력내용(선택)<br>
+                                * 보관기간: 접수일로부터 1년
+                            </span>
+                        </label>
                     </div>
                     <button type="submit" class="submit-btn">상담 예약하기</button>
                 </form>
@@ -176,7 +189,10 @@
                 <div class="sub-text">따뜻한 마음으로 어르신을 모실 요양보호사 선생님을 모십니다.</div>
             </div>
             <div class="form-container">
-                <form id="recruitment-form">
+                <form id="recruitment-form" name="recruitment-form" data-netlify="true" netlify-honeypot="bot-field">
+                    <p class="hidden">
+                        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <div class="form-group">
                         <label for="reg-name">성함</label>
                         <input type="text" id="reg-name" name="name" placeholder="이름을 입력해 주세요" required>
@@ -188,6 +204,16 @@
                     <div class="form-group">
                         <label for="reg-field">지원분야/문의내용</label>
                         <textarea id="reg-field" name="message" placeholder="지원하시는 분야나 궁금하신 점을 작성해 주세요" required></textarea>
+                    </div>
+                    <div class="privacy-agreement">
+                        <input type="checkbox" id="reg-agree" required>
+                        <label for="reg-agree">
+                            개인정보 수집 및 이용에 동의합니다. (필수)
+                            <span class="privacy-detail">
+                                * 수집항목: 성함, 연락처(필수), 입력내용(선택)<br>
+                                * 보관기간: 접수일로부터 1년
+                            </span>
+                        </label>
                     </div>
                     <button type="submit" class="submit-btn">지원하기</button>
                 </form>
@@ -205,8 +231,8 @@
                     <p>주소: 경남 창녕군 창녕읍 여초길 168</p>
                 </div>
                 <div class="footer-contact">
-                    <p>상담문의 (24시간 친절상담)</p>
-                    <a href="tel:055-532-8929" style="font-size: 2rem;">055-532-8929</a>
+                    <p>상담문의</p>
+                    <a href="tel:01054368928" style="font-size: 2rem;">010-5436-8928</a>
                 </div>
             </div>
             <div class="copyright">
