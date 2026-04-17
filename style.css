@@ -370,7 +370,7 @@ nav {
     line-height: 1.4;
 }
 
-/* Floating Kakao */
+/* Floating Kakao (Mobile Only) */
 .floating-kakao {
     position: fixed;
     bottom: 30px;
@@ -380,7 +380,7 @@ nav {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    display: flex;
+    display: none; /* Default: Hidden */
     align-items: center;
     justify-content: center;
     font-size: 30px;
@@ -449,5 +449,8 @@ footer {
     }
     .form-container {
         padding: 30px;
+    }
+    .floating-kakao {
+        display: flex; /* Show only on mobile */
     }
 }
