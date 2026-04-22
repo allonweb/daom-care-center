@@ -479,9 +479,6 @@ footer {
     .form-container {
         padding: 30px;
     }
-    .floating-kakao {
-        display: flex; /* Show only on mobile */
-    }
     #consult-form, #recruitment-form {
         display: none;
     }
